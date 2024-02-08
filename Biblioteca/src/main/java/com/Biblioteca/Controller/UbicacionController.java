@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@CrossOrigin(origins= {"http://31.220.83.117"})
+@CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class UbicacionController {

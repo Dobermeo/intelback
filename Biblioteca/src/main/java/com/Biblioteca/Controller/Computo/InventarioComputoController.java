@@ -18,7 +18,7 @@ import java.io.Serializable;
 import java.util.List;
 
 
-@CrossOrigin(origins= {"http://31.220.83.117"})
+@CrossOrigin
 @RestController
 @RequestMapping("/api/inventario/computo")
 public class InventarioComputoController {
