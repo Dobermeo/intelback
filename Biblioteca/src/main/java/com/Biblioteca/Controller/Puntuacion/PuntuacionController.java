@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@CrossOrigin
+@CrossOrigin(origins = {"http://localhost:4200", "http://31.220.83.117"}, allowCredentials = "true")
 @RestController
 @RequestMapping("/api/puntuacion")
 public class PuntuacionController {

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin
+@CrossOrigin(origins = {"http://localhost:4200", "http://31.220.83.117"}, allowCredentials = "true")
 @RestController
 @RequestMapping("/api/libro/cliente")
 public class ClienteLibroController {
