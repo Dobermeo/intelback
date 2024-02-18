@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+  #configuracion para postgres
+  dbpostgres:
+    container_name: postgres
+    image: postgres:12.1
+    environment:
+      - POSTGRES_USER=inteluser
+      - POSTGRES_PASSWORD=ad12min3
+    volumes:
+      - /db/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - biblioteca_default
+
+  #configuracion para pgadmin
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=dobermeo@sudamericano.edu.ec
+      - PGADMIN_DEFAULT_PASSWORD=suda2020
+    ports:
+      - "8090:80"
+    networks:
+      - biblioteca_default
+
+volumes:
+  dbdata:
+    driver: local
+
+networks:
+  biblioteca_default:
+    driver: bridge
